@@ -1,0 +1,41 @@
+.nav {
+  @include flex-box(column, center);
+  padding: 0;
+  margin: 0 0 em(80px);
+  @include mq(med) {
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+
+  &__item {
+    @include mq(large) {
+      margin: 0 15px;
+    }
+    a {
+      &:link,
+      &:visited {
+        color: $light-grey;
+        display: block;
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 200;
+        font-size: em(20px);
+        padding: em(18px);
+        border-radius: em(10px);
+        transition: color 0.3s, background-color 0.3s;
+        @include mq(med) {
+          padding: em(7px) em(20px);
+        }
+        @include mq(large) {
+          padding: em(3px) em(20px);
+        }
+      }
+       &:hover,
+       &:active {
+         color: #fff;
+         background-color: $color-accent;
+       }
+     }
+  }
+}

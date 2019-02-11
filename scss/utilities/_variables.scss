@@ -1,0 +1,56 @@
+
+// Fonts
+$font-url--google: 'https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900';
+$font-stack: 'Lato', sans-serif;
+$base__font-size: 18px;
+$base__line: 30px;
+
+// Descriptive Colors
+$white: #fff;
+$dark-grey: #384047;
+$light-grey: lighten($dark-grey, 20%);
+$malibu: #51DDFC;
+$emerald: #63CC82;
+$sunglo: #E4757A;
+$coral: #FD7856;
+$purple-mtn-majesty: #927BC1;
+
+// Colors by function
+$color-text: $light-grey;
+$color-bg: $white;
+$color-accent: mix($malibu, $emerald, 67%);
+
+
+// UI Colors Map
+$ui-colors: (
+	default : $malibu,
+	success : $emerald,
+	error   : $sunglo,
+	warning : $coral,
+	info    : $purple-mtn-majesty
+);
+
+$grid-colors: (
+	1: lighten($dark-grey, 10%),
+	2: lighten($coral, 20%),
+	3: lighten($purple-mtn-majesty, 15%),
+	4: darken($emerald, 10%),
+	5: lighten($emerald, 10%),
+	6: darken($malibu, 20%),
+	7: darken($sunglo, 10%),
+	8: darken($coral, 10%),
+	9: lighten($sunglo, 10%),
+	10: darken($purple-mtn-majesty, 10%),
+	11: lighten($coral, 10%),
+	12: lighten($malibu, 10%)
+);
+
+// Grid Size
+$grid-col-width: 65px;
+$grid-gutter-width: 20px;
+$grid-col-count: 12;
+$grid-container-max-width: 1050px;
+
+// Media Breakpoints
+$break-md: 769px;
+$break-lg: 1050px;

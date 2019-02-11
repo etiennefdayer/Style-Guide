@@ -1,0 +1,51 @@
+
+// Media Query
+@mixin mq($break){
+  @if $break == 'med' {
+    @media (min-width: $break-md) {
+      @content;
+    }
+  }
+  @else if $break == 'large' {
+    @media (min-width: $break-lg) {
+      @content;
+    }
+  }
+  @else {
+    @error "Oops! Please enter either 'med' or 'large' as argument for this mixin. You entered: '#{$break}'.";
+  }
+}
+// Flexbox Settings
+@mixin flex-box($dir: row, $just: flex-start, $align: stretch){
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $just;
+    align-items: $align;
+    @content;
+}
+// Get Button Colors
+@mixin bg-colors($map) {
+  @each $theme, $color in $map {
+    &--#{$theme}.theme__colors {
+      @extend %btn;
+      background-color: $color;
+      @content;
+      @include mq(med) {
+        margin-right: 10px;
+      }
+      @include mq(large) {
+        margin-right: 30px;
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+// Apply left margin to all siblings EXCEPT the first
+@mixin double-amp($margin: 1em) {
+  & + & {
+    margin-left: $margin;
+    @content;
+  }
+}
