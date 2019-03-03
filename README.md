@@ -1,4 +1,4 @@
-# Style-Guide - Sass
+# Style Guide - Sass
 
 Web style guide using Sass. 
 Style guides are used to help maintain consistency in branding and save development time through documentation.
